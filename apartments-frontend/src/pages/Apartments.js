@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css'
+import '../css/App.css'
 import {
   Col,
   ListGroup,
@@ -9,6 +9,7 @@ import {
 
 class Apartments extends Component {
   render() {
+    
     return (
       <Row>
         <Col xs={12}>
@@ -16,33 +17,33 @@ class Apartments extends Component {
           <ListGroup>
             {this.props.apartments.map((apartment, index) =>{
               return (
-                <ListGroupItem>
-                <div class="container">
-                  <div class="col-sm" className='apartment-apt_number'>
+                <ListGroupItem key= {apartment.id}>
+                <div className="container">
+                  <div className="col-sm" className='apartment-apt_number'>
                     Apartment Number: {apartment.apt_number}
                   </div>
-                  <div class="col-sm"className='apartment-address'>
+                  <div className="col-sm"className='apartment-address'>
                   Address:  {apartment.address}
                   </div>
-                  <div class="col-sm"  className='apartment-city'>
+                  <div className="col-sm"  className='apartment-city'>
                     City: {apartment.city}
                   </div>
-                  <div class="col-sm" className='apartment-zip'>
+                  <div className="col-sm" className='apartment-zip'>
                   Zip Code:  {apartment.zip}
                   </div>
-                  <div class="col-sm" className='apartment-state'>
+                  <div className="col-sm" className='apartment-state'>
                     State: {apartment.state}
                   </div>
-                  <div class="col-sm" className='apartment-country'>
+                  <div className="col-sm" className='apartment-country'>
                   Country:  {apartment.country}
                   </div>
-                  <div class="col-sm" className='apartment-name'>
+                  <div className="col-sm" className='apartment-name'>
                   Name:  {apartment.name}
                   </div>
-                  <div class="col-sm" className='apartment-phone'>
+                  <div className="col-sm" className='apartment-phone'>
                   Phone Number:  {apartment.phone}
                   </div>
-                  <div class="col-sm" className='apartment-contact'>
+                  <div className="col-sm" className='apartment-contact'>
                   Contact Hours:  {apartment.contact}
                   </div>
                 </div>
