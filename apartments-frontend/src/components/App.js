@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-
+import withAuth from './withAuth'
 import Apartments from '../pages/Apartments'
 import NewApartment from '../pages/NewApartment'
 import {BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom'
@@ -64,7 +64,7 @@ newApartmentSubmit(apartment){
     }
   })
 }
-  
+
   render() {
     return (
       <Router>
@@ -124,4 +124,4 @@ newApartmentSubmit(apartment){
           }
         }
 
-export default App;
+export default withAuth(App)

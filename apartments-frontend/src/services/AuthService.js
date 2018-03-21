@@ -1,5 +1,5 @@
 import decode from 'jwt-decode';
- class AuthService {
+export default class AuthService {
     constructor(domain) {
         this.domain = domain || 'http://localhost:3000' // We can pass in the backend server, or use a default for dev
         this.fetch = this.fetch.bind(this)
@@ -94,5 +94,3 @@ import decode from 'jwt-decode';
       }
    }
 }
-
-export default AuthService

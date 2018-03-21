@@ -17,16 +17,16 @@ class Login extends Component {
   }
 
   handleFormSubmit(e){
+    console.log(this.state);
     e.preventDefault()
     this.Auth.login(this.state.email,this.state.password)
     .then(res =>{
       this.props.history.replace('/')
     })
-    .catch(err =>{ alert(err) })
+    .catch(err =>{ console.log(err) })
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="center">
         <div className="card">
