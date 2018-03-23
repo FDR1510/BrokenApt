@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import Apartments from './pages/Apartments'
-import NewApartment from './pages/NewApartment'
+import '../css/App.css';
+import withAuth from './withAuth'
+import Apartments from '../pages/Apartments'
+import NewApartment from '../pages/NewApartment'
 import {BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom'
 import {
   Grid,
@@ -123,4 +124,4 @@ newApartmentSubmit(apartment){
           }
         }
 
-export default App;
+export default withAuth(App)
